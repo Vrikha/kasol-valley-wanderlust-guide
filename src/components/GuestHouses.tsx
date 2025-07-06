@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 
 export const GuestHouses = () => {
@@ -7,7 +6,7 @@ export const GuestHouses = () => {
       name: "Delight Homestay Kasol",
       location: "Old Kasol Village",
       price: "₹1800 - ₹2500 per night",
-      image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/lovable-uploads/ae8d3c72-7d35-41e3-bf29-66fafe9a8d66.png",
       description: "Experience authentic village life in the heart of Old Kasol. Our traditional homestay offers comfortable rooms with mountain views.",
       amenities: ["Mountain View", "Traditional Architecture", "Home-cooked Meals", "Village Experience", "WiFi Available"]
     },
@@ -15,7 +14,7 @@ export const GuestHouses = () => {
       name: "Purple House Kasol",
       location: "Beside Kasol Road, Old Kasol",
       price: "₹1500 - ₹2200 per night",
-      image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/lovable-uploads/4adbb260-d502-486f-92b0-9a7889de1079.png",
       description: "Conveniently located beside the main road, offering easy access to cafes, shops, and the river.",
       amenities: ["Central Location", "Modern Amenities", "River Access", "Cafe Nearby", "Parking Available"]
     },
@@ -23,7 +22,7 @@ export const GuestHouses = () => {
       name: "Sargam Family House",
       location: "New Kasol, Near Grahan River",
       price: "₹1500 - ₹2500 per night",
-      image: "https://images.unsplash.com/photo-1520637836862-4d197d17c90a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/lovable-uploads/8f5a1470-e2c9-457e-b891-16c2a993e129.png",
       description: "Wake up to the soothing sounds of Grahan River. Perfect for families and groups seeking tranquility.",
       amenities: ["Riverside Location", "Family Friendly", "Peaceful Environment", "River Views", "Spacious Rooms"]
     }
@@ -34,7 +33,7 @@ export const GuestHouses = () => {
       id="guesthouses" 
       className="py-20 relative"
       style={{
-        backgroundImage: `linear-gradient(rgba(236, 254, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+        backgroundImage: `linear-gradient(rgba(236, 254, 255, 0.9), rgba(255, 255, 255, 0.9)), url('/lovable-uploads/e1d163c6-c720-4e50-9c8b-96ad71b3387b.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'

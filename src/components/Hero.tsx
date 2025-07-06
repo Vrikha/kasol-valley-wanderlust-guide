@@ -5,7 +5,7 @@ export const Hero = () => {
       id="home" 
       className="min-h-screen relative overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(44, 82, 130, 0.8), rgba(34, 139, 34, 0.7)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
+        backgroundImage: `linear-gradient(rgba(44, 82, 130, 0.8), rgba(34, 139, 34, 0.7)), url('/lovable-uploads/8f5a1470-e2c9-457e-b891-16c2a993e129.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'

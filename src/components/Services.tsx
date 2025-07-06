@@ -1,23 +1,22 @@
-
 import { Card } from "@/components/ui/card";
 
 export const Services = () => {
   const services = [
     {
       icon: "🏍️",
-      title: "Bike Rentals",
+      title: "Bike Rentals", 
       price: "Starting from ₹1200/day",
       description: "Royal Enfield, Pulsar, and other premium bikes for mountain adventures",
       features: ["Helmet included", "Insurance covered", "24/7 support", "Free pick-up/drop"],
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/37a68a34-eeb6-42c6-b056-65e4c8b1f076.png"
     },
     {
       icon: "🛵",
       title: "Scooty Rentals",
-      price: "Starting from ₹600/day",
+      price: "Starting from ₹600/day", 
       description: "Perfect for exploring Kasol and nearby villages comfortably",
       features: ["Fuel efficient", "Easy to ride", "Storage space", "Local maps provided"],
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/a3fc9426-09eb-4dfa-a880-28551a062819.png"
     },
     {
       icon: "🚗",
@@ -25,7 +24,7 @@ export const Services = () => {
       price: "Charges based on destination",
       description: "Comfortable rides to Kheerganga, Tosh, Malana, and other destinations",
       features: ["Experienced drivers", "Clean vehicles", "Local knowledge", "Flexible timing"],
-      image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/1e4e772f-581a-40e1-b415-857797f23639.png"
     }
   ];
 
@@ -34,7 +33,7 @@ export const Services = () => {
       id="services" 
       className="py-20 relative"
       style={{
-        backgroundImage: `linear-gradient(rgba(240, 253, 244, 0.9), rgba(236, 254, 255, 0.9)), url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+        backgroundImage: `linear-gradient(rgba(240, 253, 244, 0.9), rgba(236, 254, 255, 0.9)), url('/lovable-uploads/b52e0892-92be-494f-94bc-c0663cb0cfc1.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
