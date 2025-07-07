@@ -1,4 +1,6 @@
 
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
 export const Gallery = () => {
   const images = [
     { 
@@ -89,34 +91,41 @@ export const Gallery = () => {
           ))}
         </div>
 
-        {/* Image Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {images.map((image) => (
-            <div 
-              key={image.id}
-              className="group relative overflow-hidden rounded-xl aspect-square cursor-pointer hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2"
-              onClick={() => handleImageClick(image)}
-            >
-              <img 
-                src={image.image} 
-                alt={image.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/50 transition-all duration-300"></div>
-              
-              {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <div className="text-2xl mb-2">{image.emoji}</div>
-                <h3 className="text-lg font-semibold">{image.title}</h3>
-                <p className="text-sm opacity-75">{image.category}</p>
-                {image.link && (
-                  <p className="text-xs mt-1 opacity-60">Click to explore more</p>
-                )}
-              </div>
-            </div>
-          ))}
+        {/* Swipeable Carousel */}
+        <div className="relative">
+          <Carousel className="w-full max-w-6xl mx-auto">
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {images.map((image) => (
+                <CarouselItem key={image.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                  <div 
+                    className="group relative overflow-hidden rounded-xl aspect-square cursor-pointer hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2"
+                    onClick={() => handleImageClick(image)}
+                  >
+                    <img 
+                      src={image.image} 
+                      alt={image.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/50 transition-all duration-300"></div>
+                    
+                    {/* Content */}
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                      <div className="text-2xl mb-2">{image.emoji}</div>
+                      <h3 className="text-lg font-semibold">{image.title}</h3>
+                      <p className="text-sm opacity-75">{image.category}</p>
+                      {image.link && (
+                        <p className="text-xs mt-1 opacity-60">Click to explore more</p>
+                      )}
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
         </div>
 
         <div className="text-center mt-12">
