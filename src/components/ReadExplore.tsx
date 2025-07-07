@@ -8,42 +8,48 @@ export const ReadExplore = () => {
       subtitle: "The Heart of Parvati Valley",
       description: "Discover the simple yet profound lifestyle of Kasol locals, their traditions, and the warmth that makes every traveler feel at home.",
       emoji: "🏘️",
-      color: "from-green-400 to-green-600"
+      color: "from-green-400 to-green-600",
+      image: "/lovable-uploads/4adbb260-d502-486f-92b0-9a7889de1079.png"
     },
     {
       title: "Tosh Village",
       subtitle: "The Lost Paradise",
       description: "Journey to the picturesque village of Tosh, known for its scenic beauty, traditional houses, and panoramic valley views.",
       emoji: "🏔️",
-      color: "from-blue-400 to-blue-600"
+      color: "from-blue-400 to-blue-600",
+      image: "/lovable-uploads/cc749614-a4c8-46c6-90e2-35a7c02bf8ee.png"
     },
     {
       title: "Chalal Village",
       subtitle: "A Peaceful Retreat",
       description: "Walk through pine forests to reach Chalal, a serene village perfect for meditation and connecting with nature.",
       emoji: "🌲",
-      color: "from-emerald-400 to-emerald-600"
+      color: "from-emerald-400 to-emerald-600",
+      image: "/lovable-uploads/b52e0892-92be-494f-94bc-c0663cb0cfc1.png"
     },
     {
       title: "Grahan Village Trek",
       subtitle: "Off the Beaten Path",
       description: "Experience an authentic Himachali village lifestyle in Grahan, accessible only by foot through beautiful mountain trails.",
       emoji: "🥾",
-      color: "from-amber-400 to-amber-600"
+      color: "from-amber-400 to-amber-600",
+      image: "/lovable-uploads/cc749614-a4c8-46c6-90e2-35a7c02bf8ee.png"
     },
     {
       title: "Manikaran Sahib & Hot Springs",
       subtitle: "Spiritual & Healing Journey",
       description: "Visit the sacred Gurudwara and experience the natural hot springs that have been healing pilgrims for centuries.",
       emoji: "🙏",
-      color: "from-yellow-400 to-orange-500"
+      color: "from-yellow-400 to-orange-500",
+      image: "/lovable-uploads/ae8d3c72-7d35-41e3-bf29-66fafe9a8d66.png"
     },
     {
       title: "Kheerganga Trek",
       subtitle: "Adventure & Relaxation",
       description: "Embark on the most popular trek in the valley, ending with natural hot springs at 3000 meters altitude.",
       emoji: "♨️",
-      color: "from-purple-400 to-purple-600"
+      color: "from-purple-400 to-purple-600",
+      image: "/lovable-uploads/8f5a1470-e2c9-457e-b891-16c2a993e129.png"
     }
   ];
 
@@ -61,8 +67,15 @@ export const ReadExplore = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {stories.map((story, index) => (
             <Card key={index} className="group cursor-pointer overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-green-100">
-              <div className={`h-32 bg-gradient-to-br ${story.color} flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300`}>
-                {story.emoji}
+              <div className="h-48 overflow-hidden relative">
+                <img 
+                  src={story.image} 
+                  alt={story.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-br ${story.color} opacity-80 flex items-center justify-center text-5xl group-hover:opacity-60 transition-opacity duration-300`}>
+                  {story.emoji}
+                </div>
               </div>
               
               <div className="p-6">

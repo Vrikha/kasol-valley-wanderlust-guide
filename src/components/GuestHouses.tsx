@@ -9,7 +9,8 @@ export const GuestHouses = () => {
       price: "₹1800 - ₹2500 per night",
       image: "/lovable-uploads/9b612d44-a68b-43c3-8676-58157e997fd2.png",
       description: "Experience authentic village life in the heart of Old Kasol. Our traditional homestay offers comfortable rooms with mountain views.",
-      amenities: ["Mountain View", "Traditional Architecture", "Home-cooked Meals", "Village Experience", "WiFi Available"]
+      amenities: ["Mountain View", "Traditional Architecture", "Home-cooked Meals", "Village Experience", "WiFi Available"],
+      bookingPhone: "8219191758"
     },
     {
       name: "Purple House Kasol",
@@ -17,13 +18,14 @@ export const GuestHouses = () => {
       price: "₹1500 - ₹2200 per night",
       image: "/lovable-uploads/7a08a76a-fc37-4772-8a82-a93506eae5ca.png",
       description: "Conveniently located beside the main road, offering easy access to cafes, shops, and the river.",
-      amenities: ["Central Location", "Modern Amenities", "River Access", "Cafe Nearby", "Parking Available"]
+      amenities: ["Central Location", "Modern Amenities", "River Access", "Cafe Nearby", "Parking Available"],
+      bookingPhone: "8219191758"
     },
     {
       name: "Sargam Family House",
       location: "New Kasol, Near Grahan River",
       price: "₹1500 - ₹2500 per night",
-      image: "/lovable-uploads/8f5a1470-e2c9-457e-b891-16c2a993e129.png",
+      image: "/lovable-uploads/6bec54d9-2ea5-4b92-952d-88bb69c4c23d.png",
       description: "Wake up to the soothing sounds of Grahan River. Perfect for families and groups seeking tranquility.",
       amenities: ["Riverside Location", "Family Friendly", "Peaceful Environment", "River Views", "Spacious Rooms"],
       facebookLink: "https://www.facebook.com/sargamtourkasol?mibextid=ZbWKwL",
@@ -34,6 +36,10 @@ export const GuestHouses = () => {
 
   const handleSocialClick = (link: string) => {
     window.open(link, '_blank');
+  };
+
+  const handleBookingClick = (phone: string) => {
+    window.open(`tel:+91${phone}`, '_self');
   };
 
   return (
@@ -107,8 +113,11 @@ export const GuestHouses = () => {
                   </div>
                 )}
                 
-                <button className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-700 transition-colors w-full">
-                  Book This Property
+                <button 
+                  onClick={() => house.bookingPhone ? handleBookingClick(house.bookingPhone) : undefined}
+                  className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-700 transition-colors w-full"
+                >
+                  {house.bookingPhone ? `Call ${house.bookingPhone}` : "Book This Property"}
                 </button>
               </div>
             </Card>
