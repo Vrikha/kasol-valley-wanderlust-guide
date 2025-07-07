@@ -17,7 +17,7 @@ export const GuestHouses = () => {
       name: "Purple House Kasol",
       location: "Beside Kasol Road, Old Kasol",
       price: "₹1500 - ₹2200 per night",
-      image: "/lovable-uploads/7a08a76a-fc37-4772-8a82-a93506eae5ca.png",
+      image: "/lovable-uploads/87d12575-53b2-4349-8b24-edcb47d101a3.png",
       description: "Conveniently located beside the main road, offering easy access to cafes, shops, and the river.",
       amenities: ["Central Location", "Modern Amenities", "River Access", "Cafe Nearby", "Parking Available"],
       bookingPhone: "8219191758",
