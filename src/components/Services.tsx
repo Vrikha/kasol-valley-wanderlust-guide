@@ -9,7 +9,8 @@ export const Services = () => {
       price: "Starting from ₹1200/day",
       description: "Royal Enfield, Pulsar, and other premium bikes for mountain adventures",
       features: ["Helmet included", "Insurance covered", "24/7 support", "Free pick-up/drop"],
-      image: "/lovable-uploads/37a68a34-eeb6-42c6-b056-65e4c8b1f076.png"
+      image: "/lovable-uploads/37a68a34-eeb6-42c6-b056-65e4c8b1f076.png",
+      whatsappNumber: "917018227528"
     },
     {
       icon: "🛵",
@@ -18,7 +19,8 @@ export const Services = () => {
       description: "Perfect for exploring Kasol and nearby villages comfortably",
       features: ["Fuel efficient", "Easy to ride", "Storage space", "Local maps provided"],
       image: "/lovable-uploads/4a290e3c-9994-491b-969b-7ac519d97634.png",
-      link: "https://maps.app.goo.gl/MtBxjgwm14bapnbTA?g_st=aw"
+      link: "https://maps.app.goo.gl/MtBxjgwm14bapnbTA?g_st=aw",
+      whatsappNumber: "917018227528"
     },
     {
       icon: "🚗",
@@ -26,7 +28,8 @@ export const Services = () => {
       price: "Charges based on destination",
       description: "Comfortable rides to Kheerganga, Tosh, Malana, and other destinations",
       features: ["Experienced drivers", "Clean vehicles", "Local knowledge", "Flexible timing"],
-      image: "/lovable-uploads/1e4e772f-581a-40e1-b415-857797f23639.png"
+      image: "/lovable-uploads/1e4e772f-581a-40e1-b415-857797f23639.png",
+      whatsappNumber: "917018227528"
     }
   ];
 
@@ -34,6 +37,10 @@ export const Services = () => {
     if (service.link) {
       window.open(service.link, '_blank');
     }
+  };
+
+  const handleWhatsAppClick = (whatsappNumber: string) => {
+    window.open(`https://wa.me/${whatsappNumber}`, '_blank');
   };
 
   return (
@@ -81,13 +88,25 @@ export const Services = () => {
                     </div>
                   ))}
                 </div>
-                
-                <button 
-                  onClick={() => handleServiceClick(service)}
-                  className="bg-emerald-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-emerald-700 transition-colors w-full"
-                >
-                  {service.link ? "More Information" : "Book Now"}
-                </button>
+
+                <div className="flex gap-2">
+                  {service.link && (
+                    <button 
+                      onClick={() => handleServiceClick(service)}
+                      className="bg-blue-600 text-white px-4 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex-1"
+                    >
+                      More Info
+                    </button>
+                  )}
+                  
+                  <button 
+                    onClick={() => handleWhatsAppClick(service.whatsappNumber)}
+                    className="bg-green-500 text-white px-4 py-3 rounded-full font-semibold hover:bg-green-600 transition-colors flex items-center justify-center space-x-2 flex-1"
+                  >
+                    <span>💬</span>
+                    <span>WhatsApp</span>
+                  </button>
+                </div>
               </div>
             </Card>
           ))}

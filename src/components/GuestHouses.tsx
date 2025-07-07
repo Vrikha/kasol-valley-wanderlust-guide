@@ -10,7 +10,8 @@ export const GuestHouses = () => {
       image: "/lovable-uploads/9b612d44-a68b-43c3-8676-58157e997fd2.png",
       description: "Experience authentic village life in the heart of Old Kasol. Our traditional homestay offers comfortable rooms with mountain views.",
       amenities: ["Mountain View", "Traditional Architecture", "Home-cooked Meals", "Village Experience", "WiFi Available"],
-      bookingPhone: "8219191758"
+      bookingPhone: "8219191758",
+      whatsappNumber: "918219191758"
     },
     {
       name: "Purple House Kasol",
@@ -19,7 +20,8 @@ export const GuestHouses = () => {
       image: "/lovable-uploads/7a08a76a-fc37-4772-8a82-a93506eae5ca.png",
       description: "Conveniently located beside the main road, offering easy access to cafes, shops, and the river.",
       amenities: ["Central Location", "Modern Amenities", "River Access", "Cafe Nearby", "Parking Available"],
-      bookingPhone: "8219191758"
+      bookingPhone: "8219191758",
+      whatsappNumber: "918219191758"
     },
     {
       name: "Sargam Family House",
@@ -30,7 +32,8 @@ export const GuestHouses = () => {
       amenities: ["Riverside Location", "Family Friendly", "Peaceful Environment", "River Views", "Spacious Rooms"],
       facebookLink: "https://www.facebook.com/sargamtourkasol?mibextid=ZbWKwL",
       instagramLink: "https://www.instagram.com/kasol__journey?igsh=MTVweGszYmQzdG5pOQ==",
-      locationLink: "https://maps.app.goo.gl/jY29jEqQjrcb4EcA9?g_st=aw"
+      locationLink: "https://maps.app.goo.gl/jY29jEqQjrcb4EcA9?g_st=aw",
+      whatsappNumber: "917018227528"
     }
   ];
 
@@ -40,6 +43,10 @@ export const GuestHouses = () => {
 
   const handleBookingClick = (phone: string) => {
     window.open(`tel:+91${phone}`, '_self');
+  };
+
+  const handleWhatsAppClick = (whatsappNumber: string) => {
+    window.open(`https://wa.me/${whatsappNumber}`, '_blank');
   };
 
   return (
@@ -113,12 +120,24 @@ export const GuestHouses = () => {
                   </div>
                 )}
                 
-                <button 
-                  onClick={() => house.bookingPhone ? handleBookingClick(house.bookingPhone) : undefined}
-                  className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-700 transition-colors w-full"
-                >
-                  {house.bookingPhone ? `Call ${house.bookingPhone}` : "Book This Property"}
-                </button>
+                <div className="flex gap-2">
+                  {house.bookingPhone && (
+                    <button 
+                      onClick={() => handleBookingClick(house.bookingPhone!)}
+                      className="bg-sky-600 text-white px-4 py-3 rounded-full font-semibold hover:bg-sky-700 transition-colors flex-1"
+                    >
+                      Call {house.bookingPhone}
+                    </button>
+                  )}
+                  
+                  <button 
+                    onClick={() => handleWhatsAppClick(house.whatsappNumber)}
+                    className="bg-green-500 text-white px-4 py-3 rounded-full font-semibold hover:bg-green-600 transition-colors flex items-center justify-center space-x-2 flex-1"
+                  >
+                    <span>💬</span>
+                    <span>WhatsApp</span>
+                  </button>
+                </div>
               </div>
             </Card>
           ))}

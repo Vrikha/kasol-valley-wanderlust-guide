@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +10,10 @@ export const Navbar = () => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
     setIsOpen(false);
+  };
+
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/917018227528', '_blank');
   };
 
   return (
@@ -21,13 +26,22 @@ export const Navbar = () => {
           </div>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('home')} className="text-green-700 hover:text-green-900 font-medium transition-colors">Home</button>
             <button onClick={() => scrollToSection('services')} className="text-green-700 hover:text-green-900 font-medium transition-colors">Rentals</button>
             <button onClick={() => scrollToSection('guesthouses')} className="text-green-700 hover:text-green-900 font-medium transition-colors">Guest Houses</button>
             <button onClick={() => scrollToSection('explore')} className="text-green-700 hover:text-green-900 font-medium transition-colors">Explore</button>
             <button onClick={() => scrollToSection('gallery')} className="text-green-700 hover:text-green-900 font-medium transition-colors">Gallery</button>
             <button onClick={() => scrollToSection('contact')} className="text-green-700 hover:text-green-900 font-medium transition-colors">Contact</button>
+            
+            {/* WhatsApp Button */}
+            <Button
+              onClick={handleWhatsAppClick}
+              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 transition-colors"
+            >
+              <span className="text-lg">💬</span>
+              <span>WhatsApp</span>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -49,6 +63,15 @@ export const Navbar = () => {
               <button onClick={() => scrollToSection('explore')} className="text-green-700 hover:text-green-900 font-medium transition-colors text-left">Explore</button>
               <button onClick={() => scrollToSection('gallery')} className="text-green-700 hover:text-green-900 font-medium transition-colors text-left">Gallery</button>
               <button onClick={() => scrollToSection('contact')} className="text-green-700 hover:text-green-900 font-medium transition-colors text-left">Contact</button>
+              
+              {/* Mobile WhatsApp Button */}
+              <Button
+                onClick={handleWhatsAppClick}
+                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 transition-colors w-full justify-center"
+              >
+                <span className="text-lg">💬</span>
+                <span>WhatsApp</span>
+              </Button>
             </div>
           </div>
         )}
