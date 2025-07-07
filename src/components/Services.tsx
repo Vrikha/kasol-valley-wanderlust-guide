@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 
 export const Services = () => {
@@ -16,7 +17,8 @@ export const Services = () => {
       price: "Starting from ₹600/day", 
       description: "Perfect for exploring Kasol and nearby villages comfortably",
       features: ["Fuel efficient", "Easy to ride", "Storage space", "Local maps provided"],
-      image: "/lovable-uploads/a3fc9426-09eb-4dfa-a880-28551a062819.png"
+      image: "/lovable-uploads/4a290e3c-9994-491b-969b-7ac519d97634.png",
+      link: "https://maps.app.goo.gl/MtBxjgwm14bapnbTA?g_st=aw"
     },
     {
       icon: "🚗",
@@ -27,6 +29,12 @@ export const Services = () => {
       image: "/lovable-uploads/1e4e772f-581a-40e1-b415-857797f23639.png"
     }
   ];
+
+  const handleServiceClick = (service: any) => {
+    if (service.link) {
+      window.open(service.link, '_blank');
+    }
+  };
 
   return (
     <section 
@@ -74,8 +82,11 @@ export const Services = () => {
                   ))}
                 </div>
                 
-                <button className="bg-emerald-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-emerald-700 transition-colors w-full">
-                  Book Now
+                <button 
+                  onClick={() => handleServiceClick(service)}
+                  className="bg-emerald-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-emerald-700 transition-colors w-full"
+                >
+                  {service.link ? "More Information" : "Book Now"}
                 </button>
               </div>
             </Card>

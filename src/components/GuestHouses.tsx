@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 
 export const GuestHouses = () => {
@@ -6,7 +7,7 @@ export const GuestHouses = () => {
       name: "Delight Homestay Kasol",
       location: "Old Kasol Village",
       price: "₹1800 - ₹2500 per night",
-      image: "/lovable-uploads/ae8d3c72-7d35-41e3-bf29-66fafe9a8d66.png",
+      image: "/lovable-uploads/9b612d44-a68b-43c3-8676-58157e997fd2.png",
       description: "Experience authentic village life in the heart of Old Kasol. Our traditional homestay offers comfortable rooms with mountain views.",
       amenities: ["Mountain View", "Traditional Architecture", "Home-cooked Meals", "Village Experience", "WiFi Available"]
     },
@@ -14,7 +15,7 @@ export const GuestHouses = () => {
       name: "Purple House Kasol",
       location: "Beside Kasol Road, Old Kasol",
       price: "₹1500 - ₹2200 per night",
-      image: "/lovable-uploads/4adbb260-d502-486f-92b0-9a7889de1079.png",
+      image: "/lovable-uploads/7a08a76a-fc37-4772-8a82-a93506eae5ca.png",
       description: "Conveniently located beside the main road, offering easy access to cafes, shops, and the river.",
       amenities: ["Central Location", "Modern Amenities", "River Access", "Cafe Nearby", "Parking Available"]
     },
@@ -24,9 +25,16 @@ export const GuestHouses = () => {
       price: "₹1500 - ₹2500 per night",
       image: "/lovable-uploads/8f5a1470-e2c9-457e-b891-16c2a993e129.png",
       description: "Wake up to the soothing sounds of Grahan River. Perfect for families and groups seeking tranquility.",
-      amenities: ["Riverside Location", "Family Friendly", "Peaceful Environment", "River Views", "Spacious Rooms"]
+      amenities: ["Riverside Location", "Family Friendly", "Peaceful Environment", "River Views", "Spacious Rooms"],
+      facebookLink: "https://www.facebook.com/sargamtourkasol?mibextid=ZbWKwL",
+      instagramLink: "https://www.instagram.com/kasol__journey?igsh=MTVweGszYmQzdG5pOQ==",
+      locationLink: "https://maps.app.goo.gl/jY29jEqQjrcb4EcA9?g_st=aw"
     }
   ];
+
+  const handleSocialClick = (link: string) => {
+    window.open(link, '_blank');
+  };
 
   return (
     <section 
@@ -74,6 +82,30 @@ export const GuestHouses = () => {
                     </div>
                   ))}
                 </div>
+
+                {/* Social Media Links for Sargam Family House */}
+                {house.facebookLink && (
+                  <div className="flex gap-2 mb-4">
+                    <button 
+                      onClick={() => handleSocialClick(house.facebookLink!)}
+                      className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm hover:bg-blue-700 transition-colors"
+                    >
+                      Facebook
+                    </button>
+                    <button 
+                      onClick={() => handleSocialClick(house.instagramLink!)}
+                      className="bg-pink-600 text-white px-3 py-1 rounded-full text-sm hover:bg-pink-700 transition-colors"
+                    >
+                      Instagram
+                    </button>
+                    <button 
+                      onClick={() => handleSocialClick(house.locationLink!)}
+                      className="bg-green-600 text-white px-3 py-1 rounded-full text-sm hover:bg-green-700 transition-colors"
+                    >
+                      Location
+                    </button>
+                  </div>
+                )}
                 
                 <button className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-700 transition-colors w-full">
                   Book This Property
