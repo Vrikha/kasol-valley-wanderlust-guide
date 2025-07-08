@@ -21,7 +21,7 @@ export const Services = () => {
       features: ["Fuel efficient", "Easy to ride", "Storage space", "Local maps provided"],
       image: "/lovable-uploads/4a290e3c-9994-491b-969b-7ac519d97634.png",
       whatsappNumber: "917018227528",
-      link: "https://www.google.com/search?q=purple+house+kasol&oq=purple+house+kasol&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTITCAEQLhjHARjUAhixAxjRAxiABDINCAIQABiRAhiABBiKBTIKCAMQABixAxiABDINCAQQLhjHARjRAxiABDIHCAUQABiABDINCAYQABixAxiABBiKBTIHCAcQABiABDINCAgQABixAxiABBiKBTIKCAkQABixAxiABNIBCDM2NjRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
+      link: "https://share.google/B2R2gvwnRsmIgN096"
     },
     {
       icon: "🚗",
