@@ -1,6 +1,6 @@
 
 import { Card } from "@/components/ui/card";
-import { Bike, Car, Taxi, CheckCircle, ExternalLink, MessageCircle } from "lucide-react";
+import { Bike, Car, CheckCircle, ExternalLink, MessageCircle } from "lucide-react";
 
 export const Services = () => {
   const services = [
@@ -25,7 +25,7 @@ export const Services = () => {
       link: "https://share.google/B2R2gvwnRsmIgN096"
     },
     {
-      icon: <Taxi className="text-4xl text-green-600" size={48} />,
+      icon: <Car className="text-4xl text-green-600" size={48} />,
       title: "Taxi Service",
       price: "Charges based on destination",
       description: "Comfortable rides to Kheerganga, Tosh, Malana, and other destinations",
