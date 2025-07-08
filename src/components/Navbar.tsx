@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X, Facebook, Instagram, MessageCircle, MapPin, Home, Car, Building, BookOpen, Camera, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -17,11 +16,11 @@ export const Navbar = () => {
   };
 
   const handleFacebookClick = () => {
-    window.open('https://www.facebook.com', '_blank');
+    window.open('https://www.facebook.com/sargamtourkasol?mibextid=ZbWKwL', '_blank');
   };
 
   const handleInstagramClick = () => {
-    window.open('https://www.instagram.com', '_blank');
+    window.open('https://www.instagram.com/kasol__journey?igsh=Nmw5ZnN0a3F3emd5', '_blank');
   };
 
   return (
