@@ -1,10 +1,11 @@
 
 import { Card } from "@/components/ui/card";
+import { Bike, Car, Taxi, CheckCircle, ExternalLink, MessageCircle } from "lucide-react";
 
 export const Services = () => {
   const services = [
     {
-      icon: "🏍️",
+      icon: <Bike className="text-4xl text-orange-600" size={48} />,
       title: "Bike Rentals", 
       price: "Starting from ₹1200/day",
       description: "Royal Enfield, Pulsar, and other premium bikes for mountain adventures",
@@ -14,7 +15,7 @@ export const Services = () => {
       link: "https://www.google.com/search?q=purple+house+kasol&oq=purple+house+kasol&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTITCAEQLhjHARjUAhixAxjRAxiABDINCAIQABiRAhiABBiKBTIKCAMQABixAxiABDINCAQQLhjHARjRAxiABDIHCAUQABiABDINCAYQABixAxiABBiKBTIHCAcQABiABDINCAgQABixAxiABBiKBTIKCAkQABixAxiABNIBCDM2NjRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
     },
     {
-      icon: "🛵",
+      icon: <Car className="text-4xl text-blue-600" size={48} />,
       title: "Scooty Rentals",
       price: "Starting from ₹600/day", 
       description: "Perfect for exploring Kasol and nearby villages comfortably",
@@ -24,7 +25,7 @@ export const Services = () => {
       link: "https://share.google/B2R2gvwnRsmIgN096"
     },
     {
-      icon: "🚗",
+      icon: <Taxi className="text-4xl text-green-600" size={48} />,
       title: "Taxi Service",
       price: "Charges based on destination",
       description: "Comfortable rides to Kheerganga, Tosh, Malana, and other destinations",
@@ -76,7 +77,7 @@ export const Services = () => {
               </div>
               
               <div className="p-6 text-center">
-                <div className="text-4xl mb-4">{service.icon}</div>
+                <div className="flex justify-center mb-4">{service.icon}</div>
                 <h3 className="text-2xl font-bold text-emerald-800 mb-2">{service.title}</h3>
                 <p className="text-lg text-amber-600 font-semibold mb-4">{service.price}</p>
                 <p className="text-gray-600 mb-6">{service.description}</p>
@@ -84,7 +85,7 @@ export const Services = () => {
                 <div className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center justify-center space-x-2">
-                      <span className="text-emerald-500">✓</span>
+                      <CheckCircle className="text-emerald-500" size={16} />
                       <span className="text-sm text-gray-700">{feature}</span>
                     </div>
                   ))}
@@ -94,9 +95,10 @@ export const Services = () => {
                   {service.link && (
                     <button 
                       onClick={() => handleServiceClick(service)}
-                      className="bg-blue-600 text-white px-4 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex-1"
+                      className="bg-blue-600 text-white px-4 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex-1 flex items-center justify-center space-x-2"
                     >
-                      More Info
+                      <ExternalLink size={16} />
+                      <span>More Info</span>
                     </button>
                   )}
                   
@@ -104,7 +106,7 @@ export const Services = () => {
                     onClick={() => handleWhatsAppClick(service.whatsappNumber)}
                     className="bg-green-500 text-white px-4 py-3 rounded-full font-semibold hover:bg-green-600 transition-colors flex items-center justify-center space-x-2 flex-1"
                   >
-                    <span>💬</span>
+                    <MessageCircle size={16} />
                     <span>WhatsApp</span>
                   </button>
                 </div>
