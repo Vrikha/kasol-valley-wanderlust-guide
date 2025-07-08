@@ -30,6 +30,10 @@ export const Contact = () => {
     window.open('https://www.google.com/search?sca_esv=97d2e28a3f4a1e73&biw=1536&bih=695&sxsrf=AE3TifMx6I13Akke5RBqWd66dtYXVRZmYA:1751911307344&q=purple+house+kasol&source=lnms&fbs=AIIjpHwp1L2GRK7sUfajUN01ixwI5Y0Kl82XKWF6MtfPR1D8ny86IOVtOZZpwQkQU-EfERbXnK00KBhK1AYOL6JET_l63jHzcU_x3rLk_K0aU2-_kXb_wBP5Q7K6uFLZb-P57jSq85ttYm7h6ft9imoob_uSkAw8pUYY06uAfSfvjn5hb0R8Mho_rd6TF4ErKlzurrlnlFe68Os2rx1qZfnTX4bL_549RZtPdKJ5oH9XTMaMLevZHl4&sa=X&ved=2ahUKEwiP2ZuZqquOAxUo7jgGHYiMEOIQ0pQJegQICRAB', '_blank');
   };
 
+  const handleEmailClick = () => {
+    window.open('mailto:kasoljourney@gmail.com', '_blank');
+  };
+
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-blue-50 to-green-100">
       <div className="container mx-auto px-4">
@@ -75,7 +79,12 @@ export const Contact = () => {
                 <div className="text-2xl">✉️</div>
                 <div>
                   <h4 className="font-semibold text-green-700">Email</h4>
-                  <p className="text-gray-600">kasoljourney@gmail.com</p>
+                  <p 
+                    className="text-gray-600 cursor-pointer hover:text-blue-600 hover:underline transition-colors"
+                    onClick={handleEmailClick}
+                  >
+                    kasoljourney@gmail.com
+                  </p>
                 </div>
               </div>
               

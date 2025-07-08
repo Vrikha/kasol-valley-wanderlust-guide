@@ -10,7 +10,8 @@ export const Services = () => {
       description: "Royal Enfield, Pulsar, and other premium bikes for mountain adventures",
       features: ["Helmet included", "Insurance covered", "24/7 support", "Free pick-up/drop"],
       image: "/lovable-uploads/37a68a34-eeb6-42c6-b056-65e4c8b1f076.png",
-      whatsappNumber: "917018227528"
+      whatsappNumber: "917018227528",
+      link: "https://www.google.com/search?q=purple+house+kasol&oq=purple+house+kasol&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTITCAEQLhjHARjUAhixAxjRAxiABDINCAIQABiRAhiABBiKBTIKCAMQABixAxiABDINCAQQLhjHARjRAxiABDIHCAUQABiABDINCAYQABixAxiABBiKBTIHCAcQABiABDINCAgQABixAxiABBiKBTIKCAkQABixAxiABNIBCDM2NjRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
     },
     {
       icon: "🛵",
@@ -19,7 +20,6 @@ export const Services = () => {
       description: "Perfect for exploring Kasol and nearby villages comfortably",
       features: ["Fuel efficient", "Easy to ride", "Storage space", "Local maps provided"],
       image: "/lovable-uploads/4a290e3c-9994-491b-969b-7ac519d97634.png",
-      link: "https://maps.app.goo.gl/MtBxjgwm14bapnbTA?g_st=aw",
       whatsappNumber: "917018227528"
     },
     {

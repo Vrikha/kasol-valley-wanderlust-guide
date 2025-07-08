@@ -7,39 +7,51 @@ export const ReadExplore = () => {
       title: "Kasol Village Life",
       subtitle: "The Heart of Parvati Valley",
       description: "Discover the simple yet profound lifestyle of Kasol locals, their traditions, and the warmth that makes every traveler feel at home.",
-      image: "/lovable-uploads/4adbb260-d502-486f-92b0-9a7889de1079.png"
+      image: "/lovable-uploads/4adbb260-d502-486f-92b0-9a7889de1079.png",
+      link: "https://www.tripoto.com/himachal-pradesh/trips/my-experience-of-visiting-kasol-that-might-help-you-for-a-perfect-trip-trell-blogs-61939d5321d79"
     },
     {
       title: "Tosh Village",
       subtitle: "The Lost Paradise",
       description: "Journey to the picturesque village of Tosh, known for its scenic beauty, traditional houses, and panoramic valley views.",
-      image: "/lovable-uploads/cc749614-a4c8-46c6-90e2-35a7c02bf8ee.png"
+      image: "/lovable-uploads/cc749614-a4c8-46c6-90e2-35a7c02bf8ee.png",
+      link: "https://blogfulloftraveltales.com/?p=9"
     },
     {
       title: "Chalal Village",
       subtitle: "A Peaceful Retreat",
       description: "Walk through pine forests to reach Chalal, a serene village perfect for meditation and connecting with nature.",
-      image: "/lovable-uploads/b52e0892-92be-494f-94bc-c0663cb0cfc1.png"
+      image: "/lovable-uploads/b52e0892-92be-494f-94bc-c0663cb0cfc1.png",
+      link: "https://www.tripoto.com/kasol/places-to-visit/chalal"
     },
     {
       title: "Grahan Village Trek",
       subtitle: "Off the Beaten Path",
       description: "Experience an authentic Himachali village lifestyle in Grahan, accessible only by foot through beautiful mountain trails.",
-      image: "/lovable-uploads/cc749614-a4c8-46c6-90e2-35a7c02bf8ee.png"
+      image: "/lovable-uploads/cc749614-a4c8-46c6-90e2-35a7c02bf8ee.png",
+      link: "https://meetusontheroad.com/kasol-to-grahan-trekking/#google_vignette"
     },
     {
       title: "Manikaran Sahib & Hot Springs",
       subtitle: "Spiritual & Healing Journey",
       description: "Visit the sacred Gurudwara and experience the natural hot springs that have been healing pilgrims for centuries.",
-      image: "/lovable-uploads/ae8d3c72-7d35-41e3-bf29-66fafe9a8d66.png"
+      image: "/lovable-uploads/ae8d3c72-7d35-41e3-bf29-66fafe9a8d66.png",
+      link: "https://www.masalabox.co.in/manikaran-pilgrimage-parvati-valley-temples-india/"
     },
     {
       title: "Kheerganga Trek",
       subtitle: "Adventure & Relaxation",
       description: "Embark on the most popular trek in the valley, ending with natural hot springs at 3000 meters altitude.",
-      image: "/lovable-uploads/8f5a1470-e2c9-457e-b891-16c2a993e129.png"
+      image: "/lovable-uploads/8f5a1470-e2c9-457e-b891-16c2a993e129.png",
+      link: "https://blogfulloftraveltales.com/?p=184"
     }
   ];
+
+  const handleStoryClick = (story: any) => {
+    if (story.link) {
+      window.open(story.link, '_blank');
+    }
+  };
 
   return (
     <section id="explore" className="py-20 bg-gradient-to-b from-white to-green-50">
@@ -70,7 +82,10 @@ export const ReadExplore = () => {
                 <p className="text-blue-600 font-medium mb-3 text-sm">{story.subtitle}</p>
                 <p className="text-gray-600 mb-4 leading-relaxed">{story.description}</p>
                 
-                <div className="flex items-center text-green-600 font-medium group-hover:text-green-800 transition-colors">
+                <div 
+                  className="flex items-center text-green-600 font-medium group-hover:text-green-800 transition-colors cursor-pointer"
+                  onClick={() => handleStoryClick(story)}
+                >
                   <span>Read More</span>
                   <span className="ml-2 transform group-hover:translate-x-2 transition-transform">→</span>
                 </div>
