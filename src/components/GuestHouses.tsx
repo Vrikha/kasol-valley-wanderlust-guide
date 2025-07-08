@@ -11,7 +11,8 @@ export const GuestHouses = () => {
       description: "Experience authentic village life in the heart of Old Kasol. Our traditional homestay offers comfortable rooms with mountain views.",
       amenities: ["Mountain View", "Traditional Architecture", "Home-cooked Meals", "Village Experience", "WiFi Available"],
       bookingPhone: "8219191758",
-      whatsappNumber: "918219191758"
+      whatsappNumber: "918219191758",
+      locationLink: "https://www.google.com/maps?sca_esv=137b759269c363f4&sxsrf=AE3TifOuYyyni82PMmdtPTy8lNWlv1ULEg:1751993266936&gs_lp=Egxnd3Mtd2l6LXNlcnAiEWRlbGlnaHQgaG9tZXN0YXkgKgIIADITEC4YgAQYFBjHARiHAhiYBRivATITEC4YgAQYQxjHARiYBRiKBRivATIFEAAYgAQyERAuGIAEGMcBGJgFGJkFGK8BMgUQABiABDIFEAAYgAQyDhAuGIAEGMcBGJgFGK8BMgUQABiABDIFEAAYgAQyDhAuGIAEGMcBGJgFGK8BMiIQLhiABBgUGMcBGIcCGJgFGK8BGJcFGNwEGN4EGOAE2AEBSM0SUPcBWPcBcAF4AZABAJgBrgGgAa4BqgEDMC4xuAEDyAEA-AEBmAIDoAL7EcICChAAGLADGNYEGEeYAwCIBgGQBgS6BgYIARABGBSSBwcxLjEuNy0xoAebFLIHAzAuMbgHwgHCBwUyLTEuMsgHIA&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KVe9RfupXQQ5Me4-4G6GpZUF&daddr=Kasol,+Sosan,+Himachal+Pradesh+175105"
     },
     {
       name: "Purple House Kasol",
@@ -21,7 +22,8 @@ export const GuestHouses = () => {
       description: "Conveniently located beside the main road, offering easy access to cafes, shops, and the river.",
       amenities: ["Central Location", "Modern Amenities", "River Access", "Cafe Nearby", "Parking Available"],
       bookingPhone: "8219191758",
-      whatsappNumber: "918219191758"
+      whatsappNumber: "918219191758",
+      locationLink: "https://www.google.com/maps/dir//Manikaran+Rd,+Kasol,+Sosan,+Himachal+Pradesh+175105/@32.0104563,77.2316281,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x39045c41e02a3195:0x734c7aff9d09c0c!2m2!1d77.3140294!2d32.0104829?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       name: "Sargam Family House",
@@ -30,14 +32,12 @@ export const GuestHouses = () => {
       image: "/lovable-uploads/6bec54d9-2ea5-4b92-952d-88bb69c4c23d.png",
       description: "Wake up to the soothing sounds of Grahan River. Perfect for families and groups seeking tranquility.",
       amenities: ["Riverside Location", "Family Friendly", "Peaceful Environment", "River Views", "Spacious Rooms"],
-      facebookLink: "https://www.facebook.com/sargamtourkasol?mibextid=ZbWKwL",
-      instagramLink: "https://www.instagram.com/kasol__journey?igsh=MTVweGszYmQzdG5pOQ==",
-      locationLink: "https://maps.app.goo.gl/jY29jEqQjrcb4EcA9?g_st=aw",
+      locationLink: "https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBggBEEUYOTIHCAIQABjvBTIKCAMQABiABBiiBDIKCAQQABiABBiiBDIHCAUQABjvBTIHCAYQABjvBdIBCDMxMDRqMGo0qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KZW7cb1TXQQ5MTucN06UMKqq&daddr=New,+Kasol,+Himachal+Pradesh+175105",
       whatsappNumber: "917018227528"
     }
   ];
 
-  const handleSocialClick = (link: string) => {
+  const handleLocationClick = (link: string) => {
     window.open(link, '_blank');
   };
 
@@ -96,29 +96,15 @@ export const GuestHouses = () => {
                   ))}
                 </div>
 
-                {/* Social Media Links for Sargam Family House */}
-                {house.facebookLink && (
-                  <div className="flex gap-2 mb-4">
-                    <button 
-                      onClick={() => handleSocialClick(house.facebookLink!)}
-                      className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm hover:bg-blue-700 transition-colors"
-                    >
-                      Facebook
-                    </button>
-                    <button 
-                      onClick={() => handleSocialClick(house.instagramLink!)}
-                      className="bg-pink-600 text-white px-3 py-1 rounded-full text-sm hover:bg-pink-700 transition-colors"
-                    >
-                      Instagram
-                    </button>
-                    <button 
-                      onClick={() => handleSocialClick(house.locationLink!)}
-                      className="bg-green-600 text-white px-3 py-1 rounded-full text-sm hover:bg-green-700 transition-colors"
-                    >
-                      Location
-                    </button>
-                  </div>
-                )}
+                {/* Location Button */}
+                <div className="mb-4">
+                  <button 
+                    onClick={() => handleLocationClick(house.locationLink)}
+                    className="bg-green-600 text-white px-4 py-2 rounded-full text-sm hover:bg-green-700 transition-colors w-full"
+                  >
+                    📍 View Location
+                  </button>
+                </div>
                 
                 <div className="flex gap-2">
                   {house.bookingPhone && (
