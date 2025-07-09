@@ -54,49 +54,75 @@ export const ReadExplore = () => {
   };
 
   return (
-    <section id="explore" className="py-20 bg-gradient-to-b from-white to-green-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">Read & Explore</h2>
-          <p className="text-xl text-green-700 max-w-3xl mx-auto">
+    <section id="explore" className="py-24 bg-gradient-to-br from-slate-50 via-emerald-50 to-teal-50 relative overflow-hidden">
+      {/* Premium background elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-40 left-20 w-80 h-80 bg-gradient-to-br from-emerald-300 to-teal-400 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-40 right-20 w-96 h-96 bg-gradient-to-br from-blue-300 to-sky-400 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-20">
+          <p className="text-emerald-600 font-medium text-lg tracking-wider uppercase mb-4">
+            Curated Experiences
+          </p>
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-emerald-800 via-teal-700 to-emerald-800 bg-clip-text text-transparent mb-8">
+            Read & Explore
+          </h2>
+          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light">
             Immerse yourself in the rich culture and breathtaking destinations around Kasol. 
-            Let our stories guide your next adventure in the Parvati Valley.
+            Let our carefully curated stories guide your next adventure in the Parvati Valley.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {stories.map((story, index) => (
-            <Card key={index} className="group cursor-pointer overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-green-100">
-              <div className="h-48 overflow-hidden relative">
+            <Card key={index} className="group cursor-pointer overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border-2 border-emerald-100/50 hover:border-emerald-200 bg-white/80 backdrop-blur-sm rounded-3xl">
+              <div className="h-56 overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10"></div>
                 <img 
                   src={story.image} 
                   alt={story.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute bottom-4 left-4 z-20">
+                  <span className="bg-emerald-500 text-white px-3 py-1 rounded-full text-xs font-semibold tracking-wide">
+                    FEATURED
+                  </span>
+                </div>
               </div>
               
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-green-800 mb-2 group-hover:text-green-900 transition-colors">
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-emerald-800 transition-colors leading-tight">
                   {story.title}
                 </h3>
-                <p className="text-blue-600 font-medium mb-3 text-sm">{story.subtitle}</p>
-                <p className="text-gray-600 mb-4 leading-relaxed">{story.description}</p>
+                <p className="text-emerald-600 font-semibold mb-4 text-sm uppercase tracking-wide">
+                  {story.subtitle}
+                </p>
+                <p className="text-slate-600 mb-6 leading-relaxed font-light">
+                  {story.description}
+                </p>
                 
                 <div 
-                  className="flex items-center text-green-600 font-medium group-hover:text-green-800 transition-colors cursor-pointer"
+                  className="group/btn flex items-center text-emerald-600 font-semibold hover:text-emerald-800 transition-all duration-300 cursor-pointer"
                   onClick={() => handleStoryClick(story)}
                 >
-                  <span>Read More</span>
-                  <span className="ml-2 transform group-hover:translate-x-2 transition-transform">→</span>
+                  <span>Explore Story</span>
+                  <span className="ml-2 transform group-hover/btn:translate-x-2 transition-transform duration-300 text-lg">
+                    →
+                  </span>
                 </div>
               </div>
             </Card>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <button className="bg-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
-            Explore All Stories
+        <div className="text-center mt-16">
+          <button className="bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 text-white px-10 py-4 rounded-full font-semibold text-lg hover:from-emerald-600 hover:via-teal-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-emerald-500/25">
+            <span className="flex items-center space-x-2">
+              <span>Discover All Adventures</span>
+              <span>✨</span>
+            </span>
           </button>
         </div>
       </div>
